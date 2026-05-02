@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khan Hair Center | Apple Edition V3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --apple-black: #000000;
+            --apple-gray: #1d1d1f;
+            --apple-blue: #0071e3;
+            --apple-text: #f5f5f7;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--apple-black);
+            color: var(--apple-text);
+            letter-spacing: -0.01em;
+        }
+        .hero-title {
+            font-size: clamp(3rem, 10vw, 8rem);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+        }
+        .section-padding { padding: 120px 20px; }
+        .bento-card {
+            background: var(--apple-gray);
+            border-radius: 2rem;
+            padding: 40px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.4s ease;
+        }
+        .bento-card:hover {
+            border-color: rgba(255,255,255,0.15);
+            transform: scale(1.01);
+        }
+        .glass-nav {
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .slider-container {
+            position: relative;
+            aspect-ratio: 4/5;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            cursor: ew-resize;
+        }
+        .btn-apple {
+            background: #fff;
+            color: #000;
+            border-radius: 999px;
+            padding: 16px 32px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .btn-apple:hover {
+            background: #e5e5e5;
+            transform: scale(1.02);
+        }
+        .text-gradient {
+            background: linear-gradient(180deg, #fff 0%, #a1a1a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Nav -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 bg-white rounded-md flex items-center justify-center text-black font-black text-xs">K</div>
+                <span class="font-bold text-sm tracking-tight">Khan Hair Center</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-[11px] font-medium text-white/50">
+                <a href="#results" class="hover:text-white transition-colors">Результаты</a>
+                <a href="#founder" class="hover:text-white transition-colors">Основатель</a>
+                <a href="#pricing" class="hover:text-white transition-colors">Стоимость</a>
+            </div>
+            <a href="https://wa.me/77785789610" target="_blank" class="bg-white text-black px-4 py-1.5 rounded-full text-[11px] font-bold">
+                Записаться
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="min-h-screen flex flex-col items-center justify-center pt-20 text-center px-6">
+        <span class="text-white/40 text-xs font-bold uppercase tracking-[0.3em] mb-8">World Class Restoration</span>
+        <h1 class="hero-title text-gradient mb-10">
+            Густые волосы.<br/>Заново.
+        </h1>
+        <p class="max-w-2xl mx-auto text-lg md:text-2xl text-white/50 leading-relaxed mb-12">
+            Передовые методы FUE и DHI. Один день в клинике — результат на всю жизнь.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-6">
+            <a href="#quiz" class="btn-apple">Пройти тест</a>
+            <a href="#results" class="text-white hover:underline flex items-center gap-2">
+                Смотреть результаты
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+        
+        <div class="mt-20 w-full max-w-5xl mx-auto rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+            <img src="./images/case_v2_after.png" class="w-full h-auto object-cover opacity-80" alt="Result preview">
+        </div>
+    </section>
+
+    <!-- Bento Section (Turkey vs Khan) -->
+    <section id="comparison" class="section-padding">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Large Card -->
+                <div class="md:col-span-2 bento-card flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-4">Индивидуальный подход</h2>
+                        <p class="text-white/40 text-lg max-w-md">
+                            В Турции — конвейерный метод (до 20 операций в день). У нас — основатель клиники лично контролирует каждый этап вашей пересадки.
+                        </p>
+                    </div>
+                    <div class="mt-12 flex items-center gap-4">
+                        <img src="./images/founder.png" class="w-20 h-20 rounded-full object-cover grayscale">
+                        <div>
+                            <div class="font-bold">Аманжол О.</div>
+                            <div class="text-xs text-white/40 uppercase">Главный врач</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Small Card -->
+                <div class="bento-card flex flex-col justify-between bg-zinc-900 border-none">
+                    <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center mb-8">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">100% Гарантия</h3>
+                        <p class="text-white/30 text-sm">Юридический договор на приживаемость каждого графла.</p>
+                    </div>
+                </div>
+                <!-- Another Small Card -->
+                <div class="bento-card">
+                    <h3 class="text-2xl font-bold mb-4 tracking-tight">Реальная стоимость</h3>
+                    <p class="text-white/40 text-sm mb-8">Прозрачная цена «под ключ» без скрытых расходов и стресса от перелетов в Турцию.</p>
+                    <div class="text-3xl font-bold text-white">250 000 ₸</div>
+                    <div class="text-[10px] uppercase text-white/30 tracking-widest mt-1">Минимальный пакет</div>
+                </div>
+                <!-- Mid Card -->
+                <div class="md:col-span-2 bento-card relative">
+                    <div class="relative z-10">
+                        <h2 class="text-4xl font-bold mb-4">Сервис и контроль</h2>
+                        <p class="text-white/40 text-lg max-w-md">Пожизненная поддержка и регулярные осмотры в клинике Астаны. Мы рядом, даже когда операция позади.</p>
+                    </div>
+                    <div class="absolute right-0 bottom-0 w-1/2 h-full opacity-20 pointer-events-none">
+                        <svg class="w-full h-full" viewBox="0 0 200 200"><path fill="currentColor" d="M44.7,-76.4C58.1,-69.2,70.1,-58.5,77.4,-45.5C84.7,-32.5,87.3,-17.2,86.1,-2.4C84.9,12.4,79.9,26.7,71.4,38.6C62.9,50.5,50.8,60,37.2,67.3C23.6,74.6,8.5,79.7,-6.2,80.4C-20.9,81.1,-35.1,77.4,-47.9,70C-60.7,62.6,-72,51.5,-78.9,38.2C-85.8,24.9,-88.3,9.4,-86.3,-5.4C-84.3,-20.2,-77.8,-34.3,-68.2,-46C-58.6,-57.7,-45.8,-67,-32.1,-73.8C-18.4,-80.6,-3.8,-84.9,10.4,-86.5C24.7,-88.1,31.3,-83.6,44.7,-76.4Z" transform="translate(100 100)"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results (Cases) -->
+    <section id="results" class="section-padding bg-zinc-950">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-20">
+                <div class="max-w-2xl">
+                    <h2 class="text-5xl md:text-7xl font-bold mb-6">Трансформация реальности.</h2>
+                    <p class="text-white/40 text-lg">Более 5000 успешных операций в Казахстане и Турции.</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Case 1 -->
+                <div class="space-y-8">
+                    <div class="slider-container" id="case1-slider" onmousemove="handleSlider(event, 'case1-slider')" onmousedown="startSliding(event)" onmouseup="stopSliding()" onmouseleave="stopSliding()">
+                        <img src="./images/case_v2_after.png" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 w-full h-full object-cover before-image" style="clip-path: inset(0 50% 0 0)">
+                            <img src="./images/case_v2_before.png" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute top-0 bottom-0 w-px bg-white/50 z-10 handle" style="left: 50%"></div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30 mb-2">DHI · 4500 графтов</div>
+                        <h3 class="text-3xl font-bold">Трансформация за 12 месяцев</h3>
+                        <p class="text-white/40 mt-4 leading-relaxed">Восстановление густоты и естественной линии роста. Тот же человек, новый взгляд на жизнь.</p>
+                    </div>
+                </div>
+                <!-- Case 2 -->
+                <div class="space-y-8">
+                    <div class="slider-container" id="case2-slider" onmousemove="handleSlider(event, 'case2-slider')" onmousedown="startSliding(event)" onmouseup="stopSliding()" onmouseleave="stopSliding()">
+                        <img src="./images/case2_after.jpg" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 w-full h-full object-cover before-image" style="clip-path: inset(0 50% 0 0)">
+                            <img src="./images/case2.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute top-0 bottom-0 w-px bg-white/50 z-10 handle" style="left: 50%"></div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30 mb-2">FUE · 2800 графтов</div>
+                        <h3 class="text-3xl font-bold">Загущение макушки</h3>
+                        <p class="text-white/40 mt-4 leading-relaxed">Работа с макушкой требует особого внимания к направлению роста волос. Естественный результат.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing (Cards) -->
+    <section id="pricing" class="section-padding">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-7xl font-bold mb-6">Честная цена.</h2>
+                <p class="text-white/40 text-lg">Без сюрпризов. Рассрочка 0% через Kaspi и Halyk.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- FUE -->
+                <div class="bento-card bg-zinc-900 border-none p-12">
+                    <div class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 mb-10">Essential FUE</div>
+                    <div class="text-5xl font-bold mb-4">250 000 ₸</div>
+                    <div class="text-white/20 text-sm mb-12">или 20 833 ₸ / мес</div>
+                    <ul class="space-y-4 text-sm text-white/60 mb-12">
+                        <li class="flex gap-2"><span>✓</span> Sapphire-лезвия</li>
+                        <li class="flex gap-2"><span>✓</span> Безыгольная анестезия</li>
+                        <li class="flex gap-2"><span>✓</span> Договор-гарантия</li>
+                    </ul>
+                    <a href="https://wa.me/77785789610" class="block text-center py-4 rounded-full border border-white/20 hover:bg-white/5 transition-all font-bold text-sm">Выбрать</a>
+                </div>
+                <!-- DHI -->
+                <div class="bento-card bg-white p-12">
+                    <div class="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 mb-10">Premium DHI</div>
+                    <div class="text-5xl font-bold mb-4 text-black">480 000 ₸</div>
+                    <div class="text-black/20 text-sm mb-12">или 40 000 ₸ / мес</div>
+                    <ul class="space-y-4 text-sm text-black/60 mb-12">
+                        <li class="flex gap-2"><span class="text-blue-600">✓</span> Имплантеры Choi</li>
+                        <li class="flex gap-2"><span class="text-blue-600">✓</span> Без бритья донорской зоны</li>
+                        <li class="flex gap-2"><span class="text-blue-600">✓</span> 2 сеанса PRP в подарок</li>
+                        <li class="flex gap-2"><span class="text-blue-600">✓</span> Личный куратор 24/7</li>
+                    </ul>
+                    <a href="https://wa.me/77785789610" class="block text-center py-4 rounded-full bg-black text-white hover:bg-zinc-800 transition-all font-bold text-sm">Выбрать</a>
+                </div>
+                <!-- Beard -->
+                <div class="bento-card bg-zinc-900 border-none p-12">
+                    <div class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 mb-10">Beard / Brows</div>
+                    <div class="text-5xl font-bold mb-4">150 000 ₸</div>
+                    <div class="text-white/20 text-sm mb-12">или 12 500 ₸ / мес</div>
+                    <ul class="space-y-4 text-sm text-white/60 mb-12">
+                        <li class="flex gap-2"><span>✓</span> DHI-метод</li>
+                        <li class="flex gap-2"><span>✓</span> Моделирование формы</li>
+                        <li class="flex gap-2"><span>✓</span> Перекрытие шрамов</li>
+                    </ul>
+                    <a href="https://wa.me/77785789610" class="block text-center py-4 rounded-full border border-white/20 hover:bg-white/5 transition-all font-bold text-sm">Выбрать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-padding bg-black border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-black font-black text-xs">K</div>
+                    <span class="font-bold text-lg">Khan Hair Center</span>
+                </div>
+                <p class="text-white/30 text-sm max-w-xs leading-relaxed">Expertise. Precision. Excellence. Передовые методы пересадки волос в Казахстане.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-12">
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest mb-6">Контакты</h4>
+                    <ul class="text-white/40 text-sm space-y-4">
+                        <li>г. Астана, пр. Мангилик Ел 37</li>
+                        <li>+7 778 578 96 10</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest mb-6">Социальные сети</h4>
+                    <ul class="text-white/40 text-sm space-y-4">
+                        <li>Instagram</li>
+                        <li>WhatsApp</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-20 text-[10px] text-white/10 uppercase tracking-widest text-center">
+            © 2024 Khan Hair Center. Все права защищены.
+        </div>
+    </footer>
+
+    <script>
+        let isSliding = false;
+
+        function startSliding(e) { isSliding = true; }
+        function stopSliding() { isSliding = false; }
+        function handleSlider(e, id) {
+            if (!isSliding && e.type !== 'touchstart') return;
+            const slider = document.getElementById(id);
+            const rect = slider.getBoundingClientRect();
+            const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+            if (!clientX) return;
+            const x = clientX - rect.left;
+            const pct = (x / rect.width) * 100;
+            const safePct = Math.max(0, Math.min(100, pct));
+            
+            slider.querySelector('.before-image').style.clipPath = `inset(0 ${100 - safePct}% 0 0)`;
+            slider.querySelector('.handle').style.left = `${safePct}%`;
+        }
+
+        // Mobile touch support
+        document.querySelectorAll('.slider-container').forEach(s => {
+            s.addEventListener('touchstart', (e) => { isSliding = true; handleSlider(e, s.id); });
+            s.addEventListener('touchmove', (e) => { handleSlider(e, s.id); });
+            s.addEventListener('touchend', stopSliding);
+        });
+    </script>
+</body>
+</html>
